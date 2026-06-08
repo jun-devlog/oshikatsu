@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', sans-serif;
+    background-color: #ffffff;
+    color: #2A1F5E;
+    -webkit-font-smoothing: antialiased;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full
+           bg-gradient-to-r from-oshi-pink-deep to-oshi-lavender-deep
+           text-white font-bold text-base shadow-pink
+           hover:shadow-lavender hover:scale-105
+           transition-all duration-300 ease-out
+           active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full
+           bg-white text-oshi-purple font-semibold text-base 
+           border-2 border-oshi-lavender
+           hover:bg-oshi-lavender-light hover:border-oshi-lavender-deep hover:scale-105
+           transition-all duration-300 ease-out
+           shadow-soft active:scale-95;
+  }
+  
+  .section-heading {
+    @apply text-2xl md:text-3xl lg:text-4xl font-black text-oshi-navy text-center leading-tight;
+  }
+  
+  .section-sub {
+    @apply text-sm md:text-base text-oshi-purple-light text-center mt-3 leading-relaxed;
+  }
+  
+  .card-base {
+    @apply bg-white rounded-3xl p-6 shadow-card hover:shadow-card-hover
+           transition-all duration-300 ease-out hover:-translate-y-1;
+  }
+  
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-oshi-pink-deep to-oshi-lavender-deep;
+  }
+}
+
+@layer utilities {
+  .text-shadow-soft {
+    text-shadow: 0 2px 8px rgba(90, 62, 140, 0.15);
+  }
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FDE8EE; }
+::-webkit-scrollbar-thumb { background: #D4C5F0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9B7DD4; }
+
+/* フォーカスアウトライン */
+:focus-visible {
+  outline: 2px solid #9B7DD4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
