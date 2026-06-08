@@ -1,3 +1,27 @@
+# Oshikatsu
+
+推し活の思い出・イベント・支出・感想を記録できるアプリを作る個人開発プロジェクトです。
+
+## 今作っているもの
+
+まずは「推しログ」のランディングページを作成中です。
+
+## 使用技術
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## 今後やること
+
+- ログ投稿機能
+- 推し登録機能
+- 支出記録機能
+- カレンダー表示
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
