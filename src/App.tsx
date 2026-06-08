@@ -9,6 +9,7 @@ import HowToSection from './components/HowToSection';
 import PricingSection from './components/PricingSection';
 import TrustSection from './components/TrustSection';
 import FAQSection from './components/FAQSection';
+import WaitlistSection from './components/WaitlistSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import EmailModal from './components/EmailModal';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
         <PricingSection onCTAClick={openModal} />
         <TrustSection />
         <FAQSection />
+        <WaitlistSection />
         <CTASection onCTAClick={openModal} />
       </main>
       <Footer />
