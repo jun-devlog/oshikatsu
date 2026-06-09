@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Crown, Sparkles } from 'lucide-react';
+import { Check, Crown, Sparkles } from 'lucide-react';
 import { planFeatures, pricing } from '../data/pricing';
 import { AnimateIn } from './AnimateIn';
 
