@@ -1,97 +1,108 @@
-# Oshikatsu
+# 推しログ / Oshikatsu
 
-推し活の思い出・イベント・支出・感想を記録できるアプリを作る個人開発プロジェクトです。
+推し活の思い出・イベント・支出・感想を記録できる個人開発アプリです。
 
-## 今作っているもの
+現在は開発の初期段階（プレリリース）であり、アプリの紹介とリリース通知用のウェイトリスト登録フォームを兼ねたランディングページ（LP）を公開しています。
 
-まずは「推しログ」のランディングページを作成中です。
+👉 **[公開中のランディングページはこちら](https://oshikatsu-navy.vercel.app/)**
 
-## 使用技術
+---
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
+## 💡 作った目的
+推し活（ライブ参戦、グッズ購入、聖地巡礼など）はとても楽しい一方で、「いつ、どこで、何をして、いくら使ったか、その時どう感じたか」という思い出や記録が、SNSの投稿やスマホのカメラロール、家計簿アプリなどに散らばってしまいがちです。
 
-## 今後やること
+「推しログ」は、それらの推し活に関するあらゆる記録を一箇所にまとめ、自分だけの「推し活アルバム」のように楽しく簡単に振り返ることができる場所を作りたい、という想いから開発を始めました。
 
-- ログ投稿機能
-- 推し登録機能
-- 支出記録機能
-- カレンダー表示
+---
 
+## 🛠️ 使用技術
+本プロジェクトは以下の技術スタックで構成されています。
 
+### フロントエンド
+* **React** (v19)
+* **TypeScript**
+* **Vite** (ビルドツール)
+* **Tailwind CSS** (スタイリング)
 
-# React + TypeScript + Vite
+### ホスティング・外部サービス
+* **Vercel** (ホスティング・自動デプロイ)
+* **Formspree** (ウェイトリスト登録用メールフォームのバックエンド処理)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 現在できていること (実装済み)
+* **ランディングページ (LP) の作成**
+  * アプリのコンセプトや提供価値を伝えるページの作成。
+* **ウェイトリスト登録フォームの設置**
+  * Formspreeと連携し、アプリの正式リリース時の通知を希望するユーザーがメールアドレスを登録できるフォームを実装。
+* **Vercelでのデプロイ・公開**
+  * GitHubと連携し、リポジトリへのプッシュを契機とする自動デプロイ環境を構築済み。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📝 今後作る予定の機能 (MVP)
+まずは最小限の機能（MVP）を開発し、徐々にアップデートしていく予定です。
+* **推し登録機能**
+  * 自分の「推し」を登録し、アイコンやイメージカラーを設定できる機能。
+* **推し活ログ投稿**
+  * イベント名、日付、支出、感想（テキスト）、思い出の写真などを記録できる機能。
+* **ログ一覧表示**
+  * 登録した推し活の記録をタイムライン形式で一覧表示する機能。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🗺️ 今後のロードマップ
+- [x] **Phase 1**: ランディングページ（LP）作成 ＆ ウェイトリスト設置（現在）
+- [ ] **Phase 2**: MVP機能の実装（推し登録・ログ作成・一覧表示）
+- [ ] **Phase 3**: 記録の振り返り・分析機能（カレンダー表示、支出レポート、推しごとの振り返りなど）
+- [ ] **Phase 4**: データのバックアップ/エクスポート機能
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 開発環境のセットアップ
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+ローカル環境でプロジェクトを起動する手順です。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 前提条件
+* Node.js (v18以上推奨)
+* npm
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### セットアップ手順
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. リポジトリをクローンします。
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/oshikatsu.git
+   cd oshikatsu
+   ```
+   *(※GitHubのURLは実際のリポジトリURLに置き換えてください)*
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. 必要なパッケージをインストールします。
+   ```bash
+   npm install
+   ```
+
+3. 開発用サーバーを起動します。
+   ```bash
+   npm run dev
+   ```
+   起動後、ブラウザで `http://localhost:5173` にアクセスすると画面を確認できます。
+
+---
+
+## ⚙️ 開発コマンド
+
+| コマンド | 説明 |
+| :--- | :--- |
+| `npm run dev` | ローカル開発用サーバーを起動します。 |
+| `npm run build` | 本番用のビルドを行います（TypeScriptの型チェックを含む）。 |
+| `npm run preview` | ビルドされた成果物をローカルでプレビューします。 |
+| `npm run lint` | ESLintによる静的解析を実行します。 |
+
+---
+
+## ✍️ 作者メモ
+個人開発としてマイペースに作っています！
+自分自身も推し活をしている中で、「こういうのがあれば便利だな」「あとから見返してニヤニヤできるログ帳がほしいな」と思ったことが開発のきっかけです。
+まずは本当にシンプルな機能から作り始めて、自分自身が使い倒しながら、同じように推し活を楽しんでいる方々にも使ってもらえるような温かいサービスに育てていきたいと思っています。
+不具合報告や「こんな機能がほしい！」といったご意見・応援などがあれば、お気軽にどうぞ！
+
