@@ -54,16 +54,18 @@ const WaitlistSection: React.FC = () => {
 
             {/* Email input */}
             <div className="relative flex-1">
+              <label htmlFor="email" className="sr-only">メールアドレス</label>
               <Mail
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-oshi-lavender-deep pointer-events-none"
               />
               <input
-                id="waitlist-email"
+                id="email"
                 type="email"
                 name="email"
                 placeholder="メールアドレスを入力"
                 required
+                autoComplete="email"
                 className="w-full pl-11 pr-4 py-4 rounded-2xl border-2 border-oshi-lavender bg-white
                            text-oshi-navy placeholder:text-oshi-lavender-deep/50 text-sm
                            focus:border-oshi-lavender-deep focus:outline-none focus:shadow-lavender
